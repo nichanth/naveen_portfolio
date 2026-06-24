@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveen Prasath · Senior Game QA Engineer</title>
+  <meta name="description" content="The playable résumé of Naveen Prasath Manoharan — Senior Game QA Engineer. 9 years, 5,000+ bugs, Moonfrog Labs & Pole To Win." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // set theme + palette + font before paint to avoid flash
+    (function () {
+      try {
+        var t = localStorage.getItem('np-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        var p = localStorage.getItem('np-palette') || 'arcade';
+        document.documentElement.setAttribute('data-palette', p);
+        var fonts = { exo:"'Exo 2', sans-serif", chakra:"'Chakra Petch', sans-serif", rajdhani:"'Rajdhani', sans-serif", audiowide:"'Audiowide', cursive", orbitron:"'Orbitron', sans-serif" };
+        var f = localStorage.getItem('np-font') || 'exo';
+        if (fonts[f]) document.documentElement.style.setProperty('--font-display', fonts[f]);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#06060d" />
+      <g stroke="#00ffc8" stroke-width="2.2" fill="none">
+        <polygon points="50,28 68,42 61,64 39,64 32,42" />
+        <polygon points="50,38 59,46 55,58 45,58 41,46" stroke="#9d5cff" />
+      </g>
+      <text x="50" y="84" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ffc8">QA</text>
+    </svg>
+  </template>
+
+  <div class="backdrop"></div>
+  <div class="scanlines"></div>
+  <div id="root"></div>
+
+  <!-- React + Babel (pinned) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- Game controller hero animation -->
+  <script src="three-hero.js"></script>
+  <!-- Global scroll + mouse reactive graphics -->
+  <script src="fx.js"></script>
+
+  <!-- Embedded resume PDF + reliable download helper -->
+  <script src="resume-data.js"></script>
+
+  <!-- App (Babel, in order) -->
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="data.jsx"></script>
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel" src="sections.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
